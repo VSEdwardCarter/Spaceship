@@ -11,6 +11,9 @@ import java.util.ArrayList;
 
 public class SpaceShip {
     float fuel = 100.0f;
+
+
+
     ArrayList<CrewMember> crewList;
 
     public SpaceShip(ArrayList<CrewMember> crewList){this.crewList = crewList;}
@@ -46,6 +49,12 @@ public class SpaceShip {
                 crewMember.setMorale(crewMember.getMorale()-20);
             }
         });
+        crewList.forEach(crewMember -> {
+            if(crewMember.getSpecialty()== Specialty.TRANSPORTATION){
+                crewMember.setMorale(crewMember.getMorale() + 10 );
+            }
+        });
         return fuel;
     }
+
 }
