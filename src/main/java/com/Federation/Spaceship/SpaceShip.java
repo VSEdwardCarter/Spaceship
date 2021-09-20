@@ -31,29 +31,35 @@ public class SpaceShip {
     public float takeItEasy() {
         fuel -= 5;
         crewList.forEach(crewMember -> {
-            if(crewMember.getSpecialty() != Specialty.TRANSPORTATION){
-                crewMember.setMorale(crewMember.getMorale()+20);};
+            if(crewMember.getSpecialty() != Specialty.ENGINEERING &&
+                crewMember.getSpecialty() != Specialty.MAINTENANCE){
+                crewMember.setMorale(crewMember.getMorale()+20);}
+            else if(crewMember.getSpecialty() == Specialty.MAINTENANCE){
+                crewMember.setMorale(crewMember.getMorale() + 15);}
+            else if(crewMember.getSpecialty() == Specialty.ENGINEERING){
+                crewMember.setMorale(crewMember.getMorale() - 10);};
         });
-        crewList.forEach(crewMember -> {
-            if(crewMember.getSpecialty() == Specialty.TRANSPORTATION){
-                crewMember.setMorale(crewMember.getMorale() + 15);};
-        });
+
         return fuel;
     }
 
     public float refuel() {
         fuel += 50;
-        crewList.forEach(member -> {member.setMorale(member.getMorale()-5);});
         crewList.forEach(crewMember -> {
-            if(crewMember.getSpecialty()==Specialty.MAINTENANCE){
-                crewMember.setMorale(crewMember.getMorale()-20);
-            }
-        });
-        crewList.forEach(crewMember -> {
-            if(crewMember.getSpecialty()== Specialty.TRANSPORTATION){
+            if(crewMember.getSpecialty() != Specialty.MAINTENANCE &&
+                    crewMember.getSpecialty() != Specialty.TRANSPORTATION &&
+                    crewMember.getSpecialty() != Specialty.SECURITY){
+                crewMember.setMorale(crewMember.getMorale()-5);}
+            else if(crewMember.getSpecialty()==Specialty.MAINTENANCE){
+                crewMember.setMorale(crewMember.getMorale()-10);
+            }else if(crewMember.getSpecialty()== Specialty.TRANSPORTATION){
                 crewMember.setMorale(crewMember.getMorale() + 10 );
+            }else if(crewMember.getSpecialty() == Specialty.SECURITY){
+                crewMember.setMorale(crewMember.getMorale() - 20);
             }
+
         });
+
         return fuel;
     }
 

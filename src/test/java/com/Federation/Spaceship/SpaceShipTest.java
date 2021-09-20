@@ -152,7 +152,7 @@ public class SpaceShipTest {
     }
 
     @Test
-    public void testTakeItEasyInducesMoraleBy20(){
+    public void testTakeItEasyIncreasesMoraleBy20(){
         UssCarter.takeItEasy();
         float expected = 120;
         float actual = UssCarter.crewList.get(0).getMorale();
@@ -161,7 +161,7 @@ public class SpaceShipTest {
     }
 
     @Test
-    public void testRefuelIncreasesFuelBy10(){
+    public void testRefuelIncreasesFuelBy50(){
         UssCarter.refuel();
         float expected = 150;
         float actual = UssCarter.getFuel();
