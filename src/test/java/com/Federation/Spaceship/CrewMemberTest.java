@@ -1,9 +1,9 @@
 package com.Federation.Spaceship;
 
-import com.Federation.Personnel.CrewMember;
-import com.Federation.Personnel.OperationsType;
-import com.Federation.Personnel.Role;
-import com.Federation.Personnel.Specialty;
+import com.Federation.Model.Personnel.CrewMember;
+import com.Federation.Model.Personnel.OperationsType;
+import com.Federation.Model.Personnel.Role;
+import com.Federation.Model.Personnel.Specialty;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

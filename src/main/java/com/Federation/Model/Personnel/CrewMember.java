@@ -1,4 +1,4 @@
-package com.Federation.Personnel;
+package com.Federation.Model.Personnel;
 
 
 import javax.persistence.*;
@@ -18,8 +18,13 @@ public class CrewMember {
     private OperationsType operationsType = OperationsType.ONSHIP;
     private Specialty specialty = Specialty.COMBAT;
 
-    public CrewMember(String name){
-        this.name = name;
+
+
+    public CrewMember(String name) {
+
+    }
+
+    public CrewMember() {
 
     }
 
@@ -58,5 +63,25 @@ public class CrewMember {
 
     public void setSpecialty(Specialty specialty) {
         this.specialty = specialty;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public OperationsType getOperationsType() {
+        return operationsType;
+    }
+
+    public void setOperationsType(OperationsType operationsType) {
+        this.operationsType = operationsType;
     }
 }

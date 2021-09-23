@@ -1,4 +1,4 @@
-package com.Federation.Personnel;
+package com.Federation.Model.Personnel;
 
 public enum OperationsType {
     ONSHIP,

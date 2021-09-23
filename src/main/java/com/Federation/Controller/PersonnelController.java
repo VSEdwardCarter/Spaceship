@@ -1,7 +1,7 @@
 package com.Federation.Controller;
 
 
-import com.Federation.Personnel.CrewMember;
+import com.Federation.Model.Personnel.CrewMember;
 import com.Federation.Repository.PersonnelRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,9 +1,8 @@
 package com.Federation.Spaceship;
 
-import com.Federation.Personnel.CrewMember;
-import com.Federation.Personnel.OperationsType;
-import com.Federation.Personnel.Role;
-import com.Federation.Personnel.Specialty;
+import com.Federation.Model.Personnel.CrewMember;
+import com.Federation.Model.Personnel.Specialty;
+import com.Federation.Model.Spaceship.SpaceShip;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SpaceShipTest {
     SpaceShip UssCarter;
+
     public void printCrewList() {
         for (int i = 0; i < UssCarter.crewList.size(); i++) {
             System.out.print(UssCarter.crewList.get(i).getName() + " - ");

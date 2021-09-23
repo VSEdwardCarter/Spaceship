@@ -1,20 +1,15 @@
-package com.Federation.Spaceship;
+package com.Federation.Model.Spaceship;
 
 
-import com.Federation.Personnel.CrewMember;
-import com.Federation.Personnel.Specialty;
-import com.Federation.Personnel.OperationsType;
-import com.Federation.Personnel.Role;
+import com.Federation.Model.Personnel.CrewMember;
+import com.Federation.Model.Personnel.Specialty;
 
 
 import java.util.ArrayList;
 
 public class SpaceShip {
     float fuel = 100.0f;
-
-
-
-    ArrayList<CrewMember> crewList;
+    public ArrayList<CrewMember> crewList;
 
     public SpaceShip(ArrayList<CrewMember> crewList){this.crewList = crewList;}
 
