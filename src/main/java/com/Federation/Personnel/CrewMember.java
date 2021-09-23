@@ -1,6 +1,17 @@
 package com.Federation.Personnel;
 
+
+import javax.persistence.*;
+
+@Entity
+@Table(name ="Crewmembers")
 public class CrewMember {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+
     String name;
     float morale = 100.0f;
     private Role role = Role.ENTRY;
